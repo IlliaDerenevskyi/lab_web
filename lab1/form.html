@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Запропонувати місто</title>
+</head>
+<body>
+    <header>
+        <nav><a href="index.html">Головна</a> <a href="Lviv.html">Львів</a> <a href="Kyiv.html">Київ</a> <a href="Berlin.html">Берлін</a> <a href="form.html">Запропонувати місто</a></nav>
+        <h1>Запропонувати місто</h1>
+    </header>
+    <main>
+    <form action="https://formsubmit.co/iderenevsky@gmail.com" method="post">
+        <label for="name">Ім'я:</label>
+        <input type="text" id="name" name="name"><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        <label for="country">Країна:</label>
+        <select name="country" id="country" required>
+            <option value="">-- Виберіть країну --</option>
+            <optgroup label="Україна">
+                <option value="Україна">Україна</option>
+            </optgroup>
+            <optgroup label="Європа">
+                <option value="Польща">Польща</option>
+                <option value="Німеччина">Німеччина</option>
+                <option value="Франція">Франція</option>
+                <option value="Великобританія">Великобританія</option>
+                <option value="Іспанія">Іспанія</option>
+                <option value="Італія">Італія</option>
+                <option value="Чехія">Чехія</option>
+                <option value="Австрія">Австрія</option>
+            </optgroup>
+            <optgroup label="Азія">
+                <option value="Японія">Японія</option>
+                <option value="Південна Корея">Південна Корея</option>
+                <option value="Сінгапур">Сінгапур</option>
+                <option value="Таїланд">Таїланд</option>
+                <option value="В'єтнам">В'єтнам</option>
+            </optgroup>
+            <optgroup label="Північна Америка">
+                <option value="США">США</option>
+                <option value="Канада">Канада</option>
+                <option value="Мексика">Мексика</option>
+            </optgroup>
+            <optgroup label="Південна Америка">
+                <option value="Бразилія">Бразилія</option>
+                <option value="Аргентина">Аргентина</option>
+                <option value="Чилі">Чилі</option>
+            </optgroup>
+        </select><br><br>
+        <label for="city">Місто:</label>
+        <select name="city" id="city" required>
+            <option value="">-- Виберіть місто --</option>
+            <optgroup label="Україна">
+                <option value="Київ">Київ</option>
+                <option value="Харків">Харків</option>
+                <option value="Львів">Львів</option>
+                <option value="Одеса">Одеса</option>
+                <option value="Дніпро">Дніпро</option>
+                <option value="Запоріжжя">Запоріжжя</option>
+                <option value="Кривий Ріг">Кривий Ріг</option>
+                <option value="Миколаїв">Миколаїв</option>
+            </optgroup>
+            <optgroup label="Польща">
+                <option value="Варшава">Варшава</option>
+                <option value="Краків">Краків</option>
+                <option value="Вроцлав">Вроцлав</option>
+                <option value="Познань">Познань</option>
+                <option value="Гданськ">Гданськ</option>
+                <option value="Щецин">Щецин</option>
+            </optgroup>
+            <optgroup label="Німеччина">
+                <option value="Берлін">Берлін</option>
+                <option value="Мюнхен">Мюнхен</option>
+                <option value="Кельн">Кельн</option>
+                <option value="Франкфурт">Франкфурт</option>
+                <option value="Гамбург">Гамбург</option>
+                <option value="Дюссельдорф">Дюссельдорф</option>
+            </optgroup>
+            <optgroup label="Франція">
+                <option value="Париж">Париж</option>
+                <option value="Ліон">Ліон</option>
+                <option value="Марсель">Марсель</option>
+                <option value="Тулуза">Тулуза</option>
+                <option value="Ніцца">Ніцца</option>
+                <option value="Бордо">Бордо</option>
+            </optgroup>
+            <optgroup label="Великобританія">
+                <option value="Лондон">Лондон</option>
+                <option value="Манчестер">Манчестер</option>
+                <option value="Бірмінгем">Бірмінгем</option>
+                <option value="Ліворпуль">Ліворпуль</option>
+                <option value="Лідс">Лідс</option>
+                <option value="Глазго">Глазго</option>
+            </optgroup>
+            <optgroup label="Іспанія">
+                <option value="Мадрид">Мадрид</option>
+                <option value="Барселона">Барселона</option>
+                <option value="Валенсія">Валенсія</option>
+                <option value="Севілья">Севілья</option>
+                <option value="Мальага">Мальага</option>
+                <option value="Сарагоса">Сарагоса</option>
+            </optgroup>
+            <optgroup label="Італія">
+                <option value="Рим">Рим</option>
+                <option value="Мілан">Мілан</option>
+                <option value="Неаполь">Неаполь</option>
+                <option value="Венеція">Венеція</option>
+                <option value="Флоренція">Флоренція</option>
+                <option value="Туринь">Туринь</option>
+            </optgroup>
+            <optgroup label="Чехія">
+                <option value="Прага">Прага</option>
+                <option value="Брно">Брно</option>
+                <option value="Острава">Острава</option>
+                <option value="Пльзень">Пльзень</option>
+                <option value="Оломоуц">Оломоуц</option>
+            </optgroup>
+            <optgroup label="Австрія">
+                <option value="Вена">Вена</option>
+                <option value="Грац">Грац</option>
+                <option value="Інсбрук">Інсбрук</option>
+                <option value="Зальцбург">Зальцбург</option>
+                <option value="Лінц">Лінц</option>
+            </optgroup>
+            <optgroup label="Японія">
+                <option value="Токіо">Токіо</option>
+                <option value="Осака">Осака</option>
+                <option value="Йокогама">Йокогама</option>
+                <option value="Кіото">Кіото</option>
+                <option value="Кобе">Кобе</option>
+                <option value="Саппоро">Саппоро</option>
+            </optgroup>
+            <optgroup label="Південна Корея">
+                <option value="Сеул">Сеул</option>
+                <option value="Пусан">Пусан</option>
+                <option value="Інчхон">Інчхон</option>
+                <option value="Тегу">Тегу</option>
+                <option value="Тейджон">Тейджон</option>
+                <option value="Квангджу">Квангджу</option>
+            </optgroup>
+            <optgroup label="Сінгапур">
+                <option value="Сінгапур">Сінгапур</option>
+            </optgroup>
+            <optgroup label="Таїланд">
+                <option value="Бангкок">Бангкок</option>
+                <option value="Чіанг Май">Чіанг Май</option>
+                <option value="Паттайя">Паттайя</option>
+                <option value="Пхукет">Пхукет</option>
+                <option value="Наконратчасима">Наконратчасима</option>
+            </optgroup>
+            <optgroup label="В'єтнам">
+                <option value="Ханой">Ханой</option>
+                <option value="Хошимін">Хошимін</option>
+                <option value="Данан">Данан</option>
+                <option value="Хайфон">Хайфон</option>
+                <option value="Кантхо">Кантхо</option>
+            </optgroup>
+            <optgroup label="США">
+                <option value="Нью-Йорк">Нью-Йорк</option>
+                <option value="Лос-Анджелес">Лос-Анджелес</option>
+                <option value="Чикаго">Чикаго</option>
+                <option value="Хьюстон">Хьюстон</option>
+                <option value="Фенікс">Фенікс</option>
+                <option value="Філадельфія">Філадельфія</option>
+                <option value="Сан-Антоніо">Сан-Антоніо</option>
+            </optgroup>
+            <optgroup label="Канада">
+                <option value="Торонто">Торонто</option>
+                <option value="Ванкувер">Ванкувер</option>
+                <option value="Монреаль">Монреаль</option>
+                <option value="Калгарі">Калгарі</option>
+                <option value="Оттава">Оттава</option>
+                <option value="Вінніпег">Вінніпег</option>
+            </optgroup>
+            <optgroup label="Мексика">
+                <option value="Мехіко">Мехіко</option>
+                <option value="Монтеррей">Монтеррей</option>
+                <option value="Пуебла">Пуебла</option>
+                <option value="Тіхуана">Тіхуана</option>
+                <option value="Гвадалахара">Гвадалахара</option>
+            </optgroup>
+            <optgroup label="Бразилія">
+                <option value="Сан-Паулу">Сан-Паулу</option>
+                <option value="Ріо-де-Жанейро">Ріо-де-Жанейро</option>
+                <option value="Бразиліа">Бразиліа</option>
+                <option value="Салвадор">Салвадор</option>
+                <option value="Форталеза">Форталеза</option>
+            </optgroup>
+            <optgroup label="Аргентина">
+                <option value="Буенос-Айрес">Буенос-Айрес</option>
+                <option value="Кордова">Кордова</option>
+                <option value="Росаріо">Росаріо</option>
+                <option value="Мендоса">Мендоса</option>
+                <option value="Ла-Плата">Ла-Плата</option>
+            </optgroup>
+            <optgroup label="Чилі">
+                <option value="Сантьяго">Сантьяго</option>
+                <option value="Вальпараїсо">Вальпараїсо</option>
+                <option value="Пуерто-Монт">Пуерто-Монт</option>
+                <option value="Антофагаста">Антофагаста</option>
+                <option value="Пуерто-Варас">Пуерто-Варас</option>
+            </optgroup>
+        </select><br><br>
+        <label for="type">Чи треба додавати це місто:</label>
+        <select name="type" id="type">
+            <option value="yes" selected>Треба</option>
+            <option value="no">Не треба</option>
+        </select>
+        <label for="why">Чому:</label>
+        <textarea id="why" name="why"></textarea><br><br>
+        <button type="submit">Відправити</button>
+    </form>
+    </main>
+    <footer>
+        <p>Автор: Дереневський Ілля, КН-43</p>
+    </footer>
+
+</body>
+</html>
