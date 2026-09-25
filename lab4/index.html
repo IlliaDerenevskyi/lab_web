@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Акустична варта — Львів (Адаптивна версія)</title>
+  <link rel="stylesheet" href="scss/main.css">
+  <script src="./js/monitoring.js" defer></script>
+</head>
+<body>
+
+
+  <input type="checkbox" id="theme-switch" class="theme-checkbox">
+
+  <div class="page-wrapper">
+    
+
+    <header class="site-header">
+      <div class="header__inner">
+        <div class="brand">
+          <h1 class="brand__title">Акустична варта</h1>
+          <p class="brand__slogan">Тиша сьогодні — комфорт завтра • Львів</p>
+        </div>
+        
+        <div class="header__controls">
+          <nav class="nav">
+            <a href="#hero" class="nav__link active">Головна</a>
+            <a href="#monitoring" class="nav__link">Моніторинг</a>
+            <a href="#services" class="nav__link">Послуги</a>
+            <a href="#measurements" class="nav__link">Вимірювання</a>
+            <a href="#order" class="nav__link">Замовити</a>
+            <a href="#contacts" class="nav__link">Контакти</a>
+          </nav>
+
+          <label for="theme-switch" class="theme-toggle" title="Змінити тему">
+            <span class="theme-toggle__icon theme-toggle__icon--light">☀️</span>
+            <span class="theme-toggle__icon theme-toggle__icon--dark">🌙</span>
+          </label>
+        </div>
+      </div>
+    </header>
+
+    <main class="main-container">
+
+      <section id="hero" class="hero section-block">
+        <div class="hero__content">
+          <h2 class="hero__title">Професійний акустичний моніторинг</h2>
+          <p class="hero__desc">
+            Вимірюємо рівень шумового навантаження у Львові. Аналізуємо звуковий дискомфорт у реальному часі та формуємо акустичні карти для ОСББ і бізнесу.
+          </p>
+          <a href="#order" class="btn btn--primary">Замовити дослідження</a>
+        </div>
+        <div class="hero__image">
+          <img src="assets/images/2_lab_header.png" alt="Вимірювальний акустичний датчик">
+        </div>
+      </section>
+
+      <section id="monitoring" class="section-block">
+        <div class="section-title-wrap">
+          <h2 class="section-title">Поточний моніторинг</h2>
+          <span class="live-tag">
+            <span class="live-tag__dot"></span> НАЖИВО
+          </span>
+        </div>
+
+        <div class="monitoring-grid">
+          <div class="metric-card">
+            <span class="metric-card__label">Об'єкт</span>
+            <strong class="metric-card__value">ЖК «Семицвіт»</strong>
+            <span class="metric-card__sub">вул. Шевченка, 60</span>
+          </div>
+
+          <div class="metric-card">
+            <span class="metric-card__label">Середній рівень</span>
+            <div class="ticker">
+              <div class="ticker__roller">
+                <span class="ticker__item">54 дБ</span>
+                <span class="ticker__item">59 дБ</span>
+                <span class="ticker__item">63 дБ</span>
+                <span class="ticker__item">52 дБ</span>
+              </div>
+            </div>
+            <span class="badge badge--success">Норма</span>
+          </div>
+
+          <div class="metric-card">
+            <span class="metric-card__label">Період вимірювань</span>
+            <strong class="metric-card__value">08:00 – 18:00</strong>
+            <span class="metric-card__sub">Сьогодні</span>
+          </div>
+
+          <div class="metric-card">
+            <span class="metric-card__label">Кількість точок</span>
+            <strong class="metric-card__value">8 датчиків</strong>
+            <span class="metric-card__sub">Шевченківський р-н</span>
+          </div>
+
+          <div class="metric-card">
+            <span class="metric-card__label">Статус</span>
+            <strong class="metric-card__value metric-card__value--active">Вимірювання тривають</strong>
+          </div>
+        </div>
+      </section>
+
+
+
+      <section id="services" class="section-block">
+        <h2 class="section-title">Напрями роботи</h2>
+        <div class="services-grid">
+          <article class="service-card">
+            <h3 class="service-card__title">Житлові комплекси</h3>
+            <p class="service-card__text">Моніторинг шуму у дворах, біля дитячих майданчиків та вздовж міських транспортних магістралей.</p>
+          </article>
+          <article class="service-card">
+            <h3 class="service-card__title">Офісні центри</h3>
+            <p class="service-card__text">Аудит акустичного комфорту open-space просторів і перевірка шумоізоляції фасадних вікон.</p>
+          </article>
+          <article class="service-card">
+            <h3 class="service-card__title">Підприємства</h3>
+            <p class="service-card__text">Вимірювання та санітарна оцінка шуму від витяжних систем, цехів і технологічного обладнання.</p>
+          </article>
+          <article class="service-card">
+            <h3 class="service-card__title">Масові заходи</h3>
+            <p class="service-card__text">Контроль дотримання норм звукового тиску на концертних майданчиках і фестивалях просто неба.</p>
+          </article>
+        </div>
+      </section>
+
+      <aside id="alert-warning" class="warning">
+        <span class="warning__badge">ALERT</span>
+        <strong class="warning__title">Увага! Тимчасове перевищення звукового ліміту</strong>
+        <p class="warning__text">
+          На локації <strong>вул. Івана Франка / пл. Соборна</strong> зафіксовано піковий рівень 78 дБ (ремонт колії та щільний трафік).
+        </p>
+      </aside>
+
+      <section id="measurements" class="section-block">
+        <h2 class="section-title">Останні вимірювання</h2>
+        <p class="section-subtitle">Натисніть на запис у таблиці для відкриття інженерного звіту об'єкта.</p>
+
+        <div class="table-wrapper">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Дата і час</th>
+                <th>Місце</th>
+                <th>Рівень шуму</th>
+                <th>Статус</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr onclick="location.href='#modal-rynok';" class="data-table__row-link">
+                <td>12.11.2026 16:20</td>
+                <td><a href="#modal-rynok" class="table-cell-link">Пл. Ринок (Ратуша)</a></td>
+                <td class="text-danger">74 дБ</td>
+                <td><span class="pill pill--danger">Перевищення</span></td>
+              </tr>
+              <tr onclick="location.href='#modal-horodotska';" class="data-table__row-link">
+                <td>12.11.2026 13:45</td>
+                <td><a href="#modal-horodotska" class="table-cell-link">Вул. Городоцька, 110 (Привокзальна)</a></td>
+                <td class="text-warning">67 дБ</td>
+                <td><span class="pill pill--warning">Граничний</span></td>
+              </tr>
+              <tr onclick="location.href='#modal-chornovola';" class="data-table__row-link">
+                <td>12.11.2026 11:10</td>
+                <td><a href="#modal-chornovola" class="table-cell-link">Пр-т Чорновола («Спартак»)</a></td>
+                <td class="text-success">58 дБ</td>
+                <td><span class="pill pill--success">Норма</span></td>
+              </tr>
+              <tr onclick="location.href='#modal-stryiskyi';" class="data-table__row-link">
+                <td>11.11.2026 19:30</td>
+                <td><a href="#modal-stryiskyi" class="table-cell-link">Стрийський парк (Оранжерея)</a></td>
+                <td class="text-success">41 дБ</td>
+                <td><span class="pill pill--success">Норма</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="order" class="section-block">
+        <h2 class="section-title">Замовити дослідження</h2>
+        <p class="section-subtitle">Заповніть форму, і заявка надійде безпосередньо черговому інженеру сервісу.</p>
+
+        <form class="form" action="https://formspree.io/f/xbjnqweo" method="POST">
+          <div class="form__fields">
+            <div class="form__group">
+              <label for="name">Ваше ім'я <span class="req">*</span></label>
+              <input type="text" id="name" name="name" placeholder="Остап" required>
+            </div>
+
+            <div class="form__group">
+              <label for="email">Контактний Email <span class="req">*</span></label>
+              <input type="email" id="email" name="email" placeholder="example@email.com" required>
+            </div>
+
+            <div class="form__group">
+              <label for="object-type">Тип об'єкта <span class="req">*</span></label>
+              <select id="object-type" name="object_type" required>
+                <option value="" disabled selected>Оберіть об'єкт</option>
+                <option value="residential">Житловий комплекс / ОСББ</option>
+                <option value="office">Офісний центр / Коворкінг</option>
+                <option value="factory">Підприємство / Виробництво</option>
+                <option value="public_space">Громадський простір / Парк</option>
+              </select>
+            </div>
+
+            <div class="form__group">
+              <label for="date-start">Дата початку <span class="req">*</span></label>
+              <input type="date" id="date-start" name="date_start" required>
+            </div>
+
+            <div class="form__group">
+              <label for="date-end">Дата завершення <span class="req">*</span></label>
+              <input type="date" id="date-end" name="date_end" required>
+            </div>
+          </div>
+
+          <div class="form__description">
+            <div class="form__group">
+              <label for="description">Адреса та деталі замовлення</label>
+              <textarea id="description" name="description" rows="5" placeholder="Вкажіть точну адресу у Львові та джерело підозрюваного шуму..."></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary form__submit">Надіслати заявку</button>
+          </div>
+
+
+        </form>
+      </section>
+
+
+
+    </main>
+
+
+
+
+    <footer id="contacts" class="site-footer">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <strong class="footer__title">Акустична варта • Львів</strong>
+          <p class="footer__text">вул. Академіка Сахарова, 42 | +38 (032) 240-00-00</p>
+        </div>
+        <div class="footer__nav">
+          <a href="#hero">Головна</a>
+          <a href="#monitoring">Моніторинг</a>
+          <a href="#services">Послуги</a>
+          <a href="#measurements">Вимірювання</a>
+          <a href="#order">Контакти</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="copyright">© 2026 Акустична варта. Всі права захищені.</p>
+      </div>
+    </footer>
+
+    <div id="modal-rynok" class="modal">
+      <a href="#close" class="modal__backdrop" aria-label="Закрити"></a>
+      <div class="modal__dialog">
+        <a href="#close" class="modal__close">&times;</a>
+        <h3 class="modal__title">Точка вимірювання: Пл. Ринок</h3>
+        <div class="modal__body">
+          <p><strong>Поточний рівень:</strong> <span class="text-danger">74 дБ</span> (Денний ліміт: 55 дБ)</p>
+          <p><strong>Джерела навантаження:</strong> Вуличні електрогенератори, туристичний потік, доставка товарів.</p>
+          <p><strong>Обладнання:</strong> Аналізатор шуму 1-го класу SVAN-971.</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal-horodotska" class="modal">
+      <a href="#close" class="modal__backdrop" aria-label="Закрити"></a>
+      <div class="modal__dialog">
+        <a href="#close" class="modal__close">&times;</a>
+        <h3 class="modal__title">Точка вимірювання: Вул. Городоцька, 110</h3>
+        <div class="modal__body">
+          <p><strong>Поточний рівень:</strong> <span class="text-warning">67 дБ</span> (Норма: 60 дБ)</p>
+          <p><strong>Джерела навантаження:</strong> Трамвайний рух, бруківка, вантажний трафік Привокзальної.</p>
+          <p><strong>Обладнання:</strong> Сенсорний мікрофонний зонд SV-200.</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal-chornovola" class="modal">
+      <a href="#close" class="modal__backdrop" aria-label="Закрити"></a>
+      <div class="modal__dialog">
+        <a href="#close" class="modal__close">&times;</a>
+        <h3 class="modal__title">Точка вимірювання: Пр-т Чорновола</h3>
+        <div class="modal__body">
+          <p><strong>Поточний рівень:</strong> <span class="text-success">58 дБ</span></p>
+          <p><strong>Джерела навантаження:</strong> Автомобільний потік магістралі.</p>
+          <p><strong>Обладнання:</strong> Шумомір Brüel &amp; Kjær 2245.</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal-stryiskyi" class="modal">
+      <a href="#close" class="modal__backdrop" aria-label="Закрити"></a>
+      <div class="modal__dialog">
+        <a href="#close" class="modal__close">&times;</a>
+        <h3 class="modal__title">Точка вимірювання: Стрийський парк</h3>
+        <div class="modal__body">
+          <p><strong>Поточний рівень:</strong> <span class="text-success">41 дБ</span></p>
+          <p><strong>Джерела навантаження:</strong> Природний фоновий шелест дерев, птахи.</p>
+          <p><strong>Обладнання:</strong> Станція моніторингу Larson Davis LxT.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

@@ -1,15 +1,90 @@
-<h1>Лабораторні роботи з Web-програмування</h1>
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Портфоліо лабораторних робіт з Web-програмування">
+    <title>Web-портфоліо | Лабораторні роботи</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <input class="theme-checkbox" type="checkbox" id="theme-switch">
+    <div class="shell">
+        <header class="topbar">
+            <div class="mark"><span class="mark-symbol">W</span> web / portfolio</div>
+            <div class="header-meta">
+                <span class="archive-status">Лабораторний архів · 2026</span>
+                <label class="theme-toggle" for="theme-switch" title="Змінити тему">
+                    <span class="light-icon" aria-hidden="true">☀</span>
+                    <span class="dark-icon" aria-hidden="true">☾</span>
+                </label>
+            </div>
+        </header>
 
-<ul>
-    <li>
-        <a href="./lab_1/">Лабораторна робота №1</a>
-    </li>
+        <main>
+            <section class="intro" aria-labelledby="page-title">
+                <div>
+                    <p class="eyebrow">Навчальний архів · 2026</p>
+                    <h1 id="page-title">Лабораторні роботи з Web-програмування</h1>
+                    <p class="intro-copy">Добірка практичних робіт: від першої HTML-структури до адаптивного інтерфейсу з інтерактивною логікою.</p>
+                </div>
+                <div class="intro-aside">
+                    <strong>04</strong>
+                    <span>роботи в архіві<br>одна сторінка для швидкого старту</span>
+                </div>
+            </section>
 
-    <li>
-        <a href="./lab_2/">Лабораторна робота №2</a>
-    </li>
+            <section aria-labelledby="works-title">
+                <div class="section-heading">
+                    <h2 id="works-title">Архів робіт</h2>
+                    <span>Оберіть роботу, щоб переглянути результат →</span>
+                </div>
 
-    <li>
-        <a href="./lab_3/">Лабораторна робота №3</a>
-    </li>
-</ul>
+                <div class="lab-grid">
+                    <article class="lab-card">
+                        <div>
+                            <div class="card-top"><span class="number">01 / HTML</span><span class="card-icon" aria-hidden="true">⌂</span></div>
+                            <h3>Міста світу</h3>
+                            <p>Перший багатосторінковий сайт-блог про Київ, Львів і Берлін із навігацією, окремими сторінками міст та формою пропозицій.</p>
+                        </div>
+                        <div class="card-footer"><span class="tag">Базова структура</span><a class="button" href="./lab1/index.html">Переглянути <span aria-hidden="true">↗</span></a></div>
+                    </article>
+
+                    <article class="lab-card">
+                        <div>
+                            <div class="card-top"><span class="number">02 / CSS</span><span class="card-icon" aria-hidden="true">◒</span></div>
+                            <h3>Акустична варта</h3>
+                            <p>Сервіс моніторингу шуму у Львові: живі показники, картки послуг, таблиця вимірювань, модальні звіти та форма заявки.</p>
+                        </div>
+                        <div class="card-footer"><span class="tag">Стилізація</span><a class="button" href="./lab2/index.html">Переглянути <span aria-hidden="true">↗</span></a></div>
+                    </article>
+
+                    <article class="lab-card">
+                        <div>
+                            <div class="card-top"><span class="number">03 / SCSS</span><span class="card-icon" aria-hidden="true">✦</span></div>
+                            <h3>Адаптивний сервіс</h3>
+                            <p>Перероблена версія акустичного моніторингу з компонентним SCSS, BEM-класами, гнучкою сіткою та мобільною адаптацією.</p>
+                        </div>
+                        <div class="card-footer"><span class="tag">Адаптивність</span><a class="button" href="./lab3/index.html">Переглянути <span aria-hidden="true">↗</span></a></div>
+                    </article>
+
+                    <article class="lab-card">
+                        <div>
+                            <div class="card-top"><span class="number">04 / JS</span><span class="card-icon" aria-hidden="true">⌁</span></div>
+                            <h3>Дані в дії</h3>
+                            <p>Інтерактивний моніторинг із JavaScript: обробка масиву вимірювань, пошук критичних значень, категоризація та розрахунок метрик.</p>
+                        </div>
+                        <div class="card-footer"><span class="tag">Інтерактивність</span><a class="button" href="./lab4/index.html">Переглянути <span aria-hidden="true">↗</span></a></div>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Web-програмування · лабораторний архів</p>
+            <p>Зроблено для навчання та практики</p>
+        </footer>
+    </div>
+
+</body>
+</html>
