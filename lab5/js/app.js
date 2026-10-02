@@ -1,7 +1,7 @@
 'use strict';
 
 import { NoiseSensor, MobileNoiseSensor } from './models/NoiseSensor.js';
-import { NoiseMeasurement } from './models/NoiseMeasurement.js';
+
 import { MonitoringSystem } from './services/MonitoringSystem.js';
 
 const sensorsData = [
@@ -16,24 +16,27 @@ sensorsData.forEach(data => {
   system.addSensor(NoiseSensor.fromObject(data));
 });
 
+const initialAverage = system.getAverageNoiseLevel();
 const patrolSensor = new MobileNoiseSensor('MNS-01', 'Сихівський', 'вул. Сихівська', 50, 15);
 system.addSensor(patrolSensor);
 
 
 function renderSensorCard(sensor) {
   const status = sensor.getStatus();
+  const statusLabel = { normal: 'Норма', warning: 'Попередження', critical: 'Критичний рівень' }[status];
   const card = document.createElement('article');
-  card.className = `sensor-card ${status}`;
+  const badgeStatus = { normal: 'success', warning: 'warning', critical: 'danger' }[status];
+  card.className = `metric-card sensor-card ${status}`;
 
   card.innerHTML = `
     <div class="sensor-card__header">
-      <span class="sensor-card__id">${sensor.id}</span>
-      <span class="sensor-card__status badge badge--${status}">${status}</span>
+      <strong class="metric-card__value sensor-card__id">${sensor.id}</strong>
+      <span class="sensor-card__status pill pill--${badgeStatus}">${statusLabel}</span>
     </div>
     <div class="sensor-card__body">
-      <p><strong>Район:</strong> ${sensor.district}</p>
-      <p><strong>Адреса:</strong> ${sensor.location}</p>
-      <p><strong>Рівень шуму:</strong> ${sensor.noiseLevel} dB</p>
+      <p class="metric-card__sub"><strong>Район:</strong> ${sensor.district}</p>
+      <p class="metric-card__sub"><strong>Адреса:</strong> ${sensor.location}</p>
+      <p class="metric-card__sub"><strong>Рівень шуму:</strong> ${sensor.noiseLevel} dB</p>
       ${sensor instanceof MobileNoiseSensor ? `<p><strong>Заряд:</strong> ${sensor.batteryLevel}%</p>` : ''}
     </div>
   `;
@@ -56,7 +59,7 @@ function updateView() {
   }
 }
 
-document.addEventListener('DOMContentLoaded', updateView);
+updateView();
 
 
 console.group('--- Перевірка роботи системи класів ---');
@@ -67,9 +70,10 @@ console.log('Спільний метод у prototype (true):', sensorA.getStatu
 console.log('Власна властивість noiseLevel (true):', Object.hasOwn(sensorA, 'noiseLevel'));
 console.log('Власна властивість getStatus (false):', Object.hasOwn(sensorA, 'getStatus'));
 
-console.log('Середній рівень (очікується ~71.67 dB без MNS):', system.getAverageNoiseLevel(), 'dB');
+console.log('Середній рівень трьох початкових сенсорів (очікується ~71.67 dB):', initialAverage, 'dB');
 console.log('Критичні сенсори:', system.getCriticalSensors().map(s => `${s.id}: ${s.noiseLevel} dB`));
 
 sensorA.updateNoiseLevel(80);
+updateView();
 console.log(`NS-01 після оновлення: ${sensorA.noiseLevel} dB, статус: ${sensorA.getStatus()}`);
 console.groupEnd();

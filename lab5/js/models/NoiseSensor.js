@@ -48,7 +48,7 @@ export class NoiseSensor {
     if (!(measurement instanceof NoiseMeasurement)) {
       throw new Error('Очікується обʼєкт NoiseMeasurement.');
     }
-    if (!measurement.isValid()) {
+    if (!measurement.isValid() || !NoiseSensor.isValidNoiseLevel(measurement.value)) {
       throw new Error(`Вимірювання поза діапазоном: ${measurement.value} dB`);
     }
 

@@ -617,6 +617,7 @@ aside {
 }
 
 .req {
+  display: inline;
   color: #ef4444;
 }
 
