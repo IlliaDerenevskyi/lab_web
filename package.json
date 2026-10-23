@@ -1,0 +1,23 @@
+{
+  "name": "web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:lab8": "tsc -p lab8",
+    "watch:lab8": "tsc -p lab8 --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IlliaDerenevskyi/lab_web.git"
+  },
+  "keywords": [],
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/IlliaDerenevskyi/lab_web/issues"
+  },
+  "homepage": "https://github.com/IlliaDerenevskyi/lab_web#readme",
+  "devDependencies": {
+    "typescript": "^7.0.2"
+  }
+}
