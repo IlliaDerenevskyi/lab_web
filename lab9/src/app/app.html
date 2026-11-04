@@ -1,0 +1,141 @@
+<div class="page-wrapper" [class.dark]="darkTheme">
+  <header class="site-header">
+    <div class="header__inner">
+      <div class="brand">
+        <h1 class="brand__title">Акустична варта</h1>
+        <p class="brand__slogan">Тиша сьогодні — комфорт завтра • Львів</p>
+      </div>
+
+      <button
+        type="button"
+        class="theme-toggle"
+        title="Змінити тему"
+        (click)="toggleTheme()"
+      >
+        {{ darkTheme ? '🌙' : '☀️' }}
+      </button>
+    </div>
+  </header>
+
+  <main class="main-container">
+    <section class="section-block">
+      <div class="section-title-wrap">
+        <h2 class="section-title">Поточний моніторинг</h2>
+        <span class="live-tag"><span class="live-tag__dot"></span> НАЖИВО</span>
+      </div>
+
+      <div class="monitoring-grid">
+        <div class="metric-card">
+          <span class="metric-card__label">Усього датчиків</span>
+          <strong class="metric-card__value">{{ sensors.length }}</strong>
+          <span class="metric-card__sub">у списку</span>
+        </div>
+        <div class="metric-card">
+          <span class="metric-card__label">Активні</span>
+          <strong class="metric-card__value metric-card__value--active">{{ activeCount }}</strong>
+          <span class="metric-card__sub">ведуть вимірювання</span>
+        </div>
+        <div class="metric-card">
+          <span class="metric-card__label">Середній рівень</span>
+          <strong class="metric-card__value">{{ averageNoise }} дБ</strong>
+          <span class="metric-card__sub">за всіма датчиками</span>
+        </div>
+        <div class="metric-card">
+          <span class="metric-card__label">Критичні</span>
+          <strong class="metric-card__value metric-card__value--danger">{{ criticalCount }}</strong>
+          <span class="metric-card__sub">понад 70 дБ</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-block">
+      <h2 class="section-title">Додати датчик</h2>
+      <p class="section-subtitle">Нові датчики зберігаються лише в пам'яті застосунку.</p>
+
+      <form class="form" (ngSubmit)="addSensor()">
+        <div class="form__fields">
+          <div class="form__group">
+            <label for="name">Назва датчика</label>
+            <input
+              id="name"
+              name="name"
+              type="text"
+              placeholder="Сенсор Підзамче"
+              [(ngModel)]="newName"
+            />
+          </div>
+
+          <div class="form__group">
+            <label for="district">Район</label>
+            <input
+              id="district"
+              name="district"
+              type="text"
+              placeholder="Шевченківський"
+              [(ngModel)]="newDistrict"
+            />
+          </div>
+
+          <div class="form__group">
+            <label for="noise">Рівень шуму, дБ</label>
+            <input
+              id="noise"
+              name="noise"
+              type="number"
+              placeholder="65"
+              [(ngModel)]="newNoiseLevel"
+            />
+          </div>
+        </div>
+
+        @if (errorMessage) {
+          <p class="form__error">{{ errorMessage }}</p>
+        }
+
+        <button type="submit" class="btn btn--primary">Додати датчик</button>
+      </form>
+    </section>
+
+    <section class="section-block">
+      <h2 class="section-title">Активні сенсори</h2>
+      <p class="section-subtitle">Змінюйте статус датчиків або видаляйте їх зі списку.</p>
+
+      <div class="sensor-list">
+        @for (sensor of sensors; track sensor.id) {
+          <article
+            class="sensor-card sensor-card--{{ getNoiseStatus(sensor.noiseLevel) }}"
+            [class.inactive]="sensor.status === 'inactive'"
+          >
+            <div class="sensor-card__header">
+              <h3>{{ sensor.name }}</h3>
+              <span class="sensor-card__status">{{ getNoiseLabel(sensor.noiseLevel) }}</span>
+            </div>
+
+            <p>Район: {{ sensor.district }}</p>
+            <p>Рівень шуму: {{ sensor.noiseLevel }} дБ</p>
+            <p>Статус: <strong class="sensor-card__state">{{ sensor.status }}</strong></p>
+
+            <div class="actions">
+              <button type="button" class="btn btn--primary" (click)="toggleStatus(sensor.id)">
+                Змінити статус
+              </button>
+              <button type="button" class="btn btn--danger" (click)="deleteSensor(sensor.id)">
+                Видалити
+              </button>
+            </div>
+          </article>
+        } @empty {
+          <p class="empty">Датчиків поки немає.</p>
+        }
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer__inner">
+      <strong class="footer__title">Акустична варта • Львів</strong>
+      <p class="footer__text">вул. Академіка Сахарова, 42 | +38 (032) 240-00-00</p>
+    </div>
+    <p class="copyright">© 2026 Акустична варта. Всі права захищені.</p>
+  </footer>
+</div>
