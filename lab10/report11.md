@@ -1,12 +1,15 @@
 # Звіт до лабораторної роботи №11
 
 ## Тема
+
 **Назва лабораторної роботи:** Створення REST API для бази.
 
 ## Мета роботи
+
 Розширити наявний Express-сервер: реалізувати створення, читання, повне оновлення та видалення датчиків, перевірку вхідних даних і коректні HTTP-відповіді. Навчитися перевіряти API через Postman або Thunder Client і оновлювати застосунок на Render.
 
 ## Виконання роботи
+
 - продовжено проєкт `acoustic-watch-server` із попередньої лабораторної: створення Express-застосунку винесено в `src/app.js`, а `src/server.js` лише запускає HTTP-сервер (порт із `process.env.PORT`, прив'язка `0.0.0.0`);
 - маршрути датчиків зібрано в `src/routes/sensors.routes.js` за допомогою `express.Router()` і підключено через `app.use("/api/sensors", sensorsRouter)`;
 - реалізовано CRUD: `GET /api/sensors`, `GET /api/sensors/:id`, `POST /api/sensors` (201 Created), `PUT /api/sensors/:id` (200 OK), `DELETE /api/sensors/:id` (204 No Content);
@@ -17,6 +20,7 @@
 - API перевірено в Postman на локальному сервері (GET, POST, PUT, DELETE).
 
 ## Результат
+
 Опублікований сервер: [Переглянути лабораторну роботу №11](https://lab-web-e8eg.onrender.com/api/sensors)
 
 Перевірка API через Postman:
@@ -45,5 +49,8 @@
 
 ![DELETE /api/sensors/6](./screens/screen10.png)
 
+![GET https://lab-web-e8eg.onrender.com/api/sensors](image.png)
+
 ## Висновок
+
 Під час роботи закріплено навички побудови REST API на Express: поділ застосунку на `app.js`, `server.js` і роутер, реалізація операцій CRUD, використання `req.params`, `req.query` і `req.body`, валідація вхідних даних та коректні HTTP-коди (200, 201, 204, 400, 404, 500). Додатково реалізовано фільтрацію датчиків і статистику. Дані зберігаються лише в пам'яті процесу, тому після перезапуску сервера повертаються до початкового списку.
